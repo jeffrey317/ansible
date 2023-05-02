@@ -1,0 +1,23 @@
+---
+- name: Create a snapshot
+  hosts: localhost
+ # become: false
+ # gather_facts: false
+  pre_tasks:
+    - include_vars: vcenter.yml
+  tasks:
+   - name: Create a snapshot
+     community.vmware.vmware_guest_snapshot:
+       hostname: "testlab-vcsa.testlab.systex.hk"
+       username: "{{ vcenter_username }}"
+       password: "{{ vcenter_password }}"
+       datacenter: "{{ vcenter_datacenter }}"
+       folder: "/{{ vcenter_datacenter }}/vm/"
+       validate_certs: no
+       name: "{{ vm_name }}"
+       state: present
+       snapshot_name: snap1
+       description: snap1_description
+     delegate_to: localhost
+     with_items:
+       - "{{ vm_name }}"
