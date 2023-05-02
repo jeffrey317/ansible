@@ -3,7 +3,7 @@ vcenter_datacenter: "SYSTEX"
 vcenter_validate_certs: false
 vcenter_username: "Jeffrey.chui@vsphere.local"
 vcenter_password: "P@ssw0rd"
-vm_name: "test_vm1"
+#vm_name: "test_vm1"
 vm_guestid: " windows9Server64Guest "
 vm_disk_gb: 10
 vm_disk_type: "thin"
