@@ -1,0 +1,24 @@
+vcenter_hostname: "testlab-vcsa.testlab.systex.hk"
+vcenter_datacenter: "SYSTEX"
+vcenter_validate_certs: false
+vcenter_username: "Jeffrey.chui@vsphere.local"
+vcenter_password: "P@ssw0rd"
+vm_name: "test_vm1"
+vm_guestid: " windows9Server64Guest "
+vm_disk_gb: 10
+vm_disk_type: "thin"
+vm_disk_datastore: " Testlab-DS1"
+vm_hw_ram_mb: 10240
+vm_hw_cpu_n: 8
+vm_hw_scsi: "VMware Paravirtual "
+vm_net_name: "VM Lab Network (subnet 192.168.128.0/17) "
+vm_net_type: "vmxnet3"
+#vcenter_destination_folder: 'vm/Virtual\ Machines/RedHat\ Team/Jeffrey\ Chui/myvm'
+vm_state: "poweroff"
+vcenter_cluster: "SYSTEX Lab"
+my_cluster_info.id: "SYSTEX Lab"
+my_datastore.datastore: " Testlab-DS1"
+my_virtual_machine_folder.folder: "myvm"
+my_cluster_info.value.resource_pool: "192.168.128.104"
+#resource_pool: "ansible_testing"
+name: "test_vm1"
